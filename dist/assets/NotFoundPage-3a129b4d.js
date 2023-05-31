@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper-c27b6911.js";import{o,c as t,a as s}from"./index-a86eeedd.js";const n={},_={class:"not-found"},c=s("h1",null,"This is the 404 Not found page",-1),a=[c];function r(d,i){return o(),t("div",_,a)}const l=e(n,[["render",r]]);export{l as default};
