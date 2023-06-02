@@ -12,7 +12,11 @@ const db_uri = process.env.DB_URI;
 
 app.use(
   cors({
-    origins: ["http://localhost:8080", "localhost:5173"],
+    origins: [
+      "http://localhost:8080",
+      "localhost:5173",
+      "https://mevn-client.onrender.com",
+    ],
     credentials: true,
   })
 );
