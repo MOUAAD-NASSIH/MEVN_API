@@ -12,11 +12,7 @@ const db_uri = process.env.DB_URI;
 
 app.use(
   cors({
-    origins: [
-      "http://localhost:8080",
-      "localhost:5173",
-      "https://mevn-client.onrender.com",
-    ],
+    origins: ["https://mevn-client.onrender.com"],
     credentials: true,
   })
 );
@@ -29,12 +25,12 @@ connectDB(db_uri);
 app.use("/api/posts", postRoutes);
 
 // for prodction
-if (process.env.NODE === "production") {
-  app.use(express.static(__dirname + "/dist/"));
-  app.use("*", (req, res) => {
-    res.sendFile(__dirname + "/dist/index.html");
-  });
-}
+// if (process.env.NODE === "production") {
+//   app.use(express.static(__dirname + "/dist/"));
+//   app.use("*", (req, res) => {
+//     res.sendFile(__dirname + "/dist/index.html");
+//   });
+// }
 
 mongoose.connection.once("open", () => {
   app.listen(port, () => {
